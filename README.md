@@ -24,6 +24,10 @@ The structure of the project is as follows:
 
 3. **Styles**: The styles.css file provides styling for the entire blog, including header, links, and the centered image. Each blog post is styled as a card for improved readability. It uses a responsive design to ensure a good user experience on various devices.
 
+## Footer
+
+The footer is styled with the same dark background as the header and includes clickable icons linked to my various social media pages, such as Github, LinkedIn, X and Instagram. Additionally, there is a ProtonMail logo that serves as a mailto link, opening a new email to send directly to me.
+
 ## Hosting and Deployment
 
 - **GitHub**: The code is hosted on GitHub at [https://github.com/hiddenciphers/webdevblog](https://github.com/hiddenciphers/webdevblog). GitHub is used to version control the project and host the source code.

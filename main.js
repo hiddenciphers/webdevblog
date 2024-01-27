@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('https://api.github.com/repos/hiddenciphers/webdevblog/contents/posts')
             .then(response => response.json())
             .then(posts => {
+                console.log('Fetched posts:', posts);  // Log the fetched posts to the console
+
                 // Reverse the posts so that the latest one appears first
                 posts.reverse().forEach(post => {
                     // Extract post content from the GitHub API response
@@ -27,5 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the function to fetch and display all blog posts
     fetchAndDisplayPosts();
 });
+
 
 

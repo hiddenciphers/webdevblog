@@ -10,7 +10,9 @@ body {
 }
 
 header, footer {
-    background-color: #333;
+    /* background-color: #333; */
+    background-image: url('img/hiddenciphers.jpeg'); /* Set the path to the image */
+    background-size: cover; /* Adjust as needed to cover the header */
     color: #fff;
     text-align: center;
     padding: 1em 0;

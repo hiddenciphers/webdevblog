@@ -56,3 +56,10 @@ a:hover {
     max-width: 200px; /* Set a maximum width if necessary */
 }
 
+/* Style post image */
+.post-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top of the card */
+}

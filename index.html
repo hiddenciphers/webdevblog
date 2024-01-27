@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My 2024 Web Development Blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <h1>My 2024 Web Development Blog</h1>
-        <!-- Clickable Image linked to GitHub -->
-        <a href="https://www.github.com/hiddenciphers" target="_blank">
-            <img src="img/my_hybrid_github_avatar.png" alt="Hybrid Github Avatar" class="centered-image">
-        </a>
-        <!-- Search Bar -->
-        <input type="text" id="search-bar" placeholder="Search...">
-        <button id="search-button">Search</button>
+        <div class="header-content">
+            <h1>My 2024 Web Development Blog</h1>
+            <!-- Clickable Image linked to GitHub -->
+            <a href="https://www.github.com/hiddenciphers" target="_blank">
+                <img src="img/my_hybrid_github_avatar.png" alt="Hybrid Github Avatar" class="centered-image">
+            </a>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search...">
+                <button onclick="performSearch">Search</button>
+            </div>
+        </div>
     </header>
     <main>
         <!-- Blog posts will go here -->
@@ -40,6 +46,8 @@
     </footer>
     <script src="main.js"></script>
 </body>
+
 </html>
+
 
 

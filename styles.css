@@ -83,3 +83,39 @@ footer {
 .protonmail-logo {
     width: 180px; /* 2 times larger than other social media icons */
 }
+
+/* Style search bar in the header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#search-bar {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+#search-bar:focus {
+    outline: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

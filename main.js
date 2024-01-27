@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
+    let allPosts; // Declare allPosts outside the try-catch block
+
     try {
         // Fetch all blog posts from the GitHub repository
         const response = await fetch('https://api.github.com/repos/hiddenciphers/webdevblog/contents/posts');
@@ -17,8 +19,8 @@ document.addEventListener('DOMContentLoaded', async function () {
             };
         });
 
-        // Wait for all promises to resolve
-        const allPosts = await Promise.all(postPromises);
+        // Assign the resolved posts to the allPosts variable
+        allPosts = await Promise.all(postPromises);
 
         // Reverse the posts so that the latest one appears first
         allPosts.reverse().forEach((post) => {
@@ -33,9 +35,27 @@ document.addEventListener('DOMContentLoaded', async function () {
             document.querySelector('main').appendChild(article);
         });
 
-        // Add event listener for the search button
-        const searchButton = document.getElementById('search-button');
-        searchButton.addEventListener('click', performSearch);
+        // Add event listener for the search bar
+        const searchBar = document.getElementById('search-bar');
+        searchBar.addEventListener('input', function () {
+            const searchTerm = searchBar.value.toLowerCase();
+
+            // Clear existing search results
+            const main = document.querySelector('main');
+            main.innerHTML = '';
+
+            // Filter and display posts that match the search term
+            const matchingPosts = allPosts.filter((post) => post.name.toLowerCase().includes(searchTerm));
+            matchingPosts.forEach((post) => {
+                const article = document.createElement('article');
+                article.innerHTML = `
+                    <h2><a href="${post.html_url}" target="_blank">${post.name}</a></h2>
+                    <div>${post.content}</div>
+                `;
+                main.appendChild(article);
+            });
+        });
+
     } catch (error) {
         // Handle errors and log them to the console
         console.error('Error fetching and displaying blog posts:', error);
@@ -48,25 +68,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 });
 
-function performSearch() {
-    const searchBar = document.getElementById('search-bar');
-    const searchTerm = searchBar.value.toLowerCase();
-
-    // Clear existing search results
-    const main = document.querySelector('main');
-    main.innerHTML = '';
-
-    // Filter and display posts that match the search term
-    const matchingPosts = allPosts.filter((post) => post.name.toLowerCase().includes(searchTerm));
-    matchingPosts.forEach((post) => {
-        const article = document.createElement('article');
-        article.innerHTML = `
-            <h2><a href="${post.html_url}" target="_blank">${post.name}</a></h2>
-            <div>${post.content}</div>
-        `;
-        main.appendChild(article);
-    });
-}
 
 
 

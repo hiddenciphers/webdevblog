@@ -45,16 +45,7 @@ a:hover {
     margin: 0 auto;
 }
 
-.github-link {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.github-link a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.github-link a:hover {
-    text-decoration: underline;
+.smaller-image {
+    width: 50%; /* Adjust the percentage as needed */
+    max-width: 200px; /* Set a maximum width if necessary */
 }

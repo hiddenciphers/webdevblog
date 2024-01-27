@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-header, footer {
+header {
     /* background-color: #333; */
     background-image: url('img/hiddenciphers.jpeg'); /* Set the path to the image */
     background-size: cover; /* Adjust as needed to cover the header */

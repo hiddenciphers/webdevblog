@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch and display blog posts
     function fetchAndDisplayPosts() {
         // Assuming your blog posts are stored in a 'posts' directory on GitHub
-        fetch('https://api.github.com/repos/hiddenciphers/webdevelopment/contents/posts/post1.html')
+        fetch('https://api.github.com/repos/hiddenciphers/webdevblog/contents/posts/post1.html')
             .then(response => response.json())
             .then(post => {
                 // Extract post content from the GitHub API response

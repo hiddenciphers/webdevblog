@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-header {
+header, footer {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -66,11 +66,10 @@ a:hover {
 
 /* Style social media icons in the footer */
 footer {
-    text-align: center;
     padding: 20px;
 }
 
 .social-media-icon {
-    width: 30px; /* Adjust the width as needed */
+    width: 90px; /* 3 times their current size */
     margin: 0 10px; /* Adjust the margin as needed */
 }

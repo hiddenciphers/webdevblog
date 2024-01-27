@@ -39,3 +39,22 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.github-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.github-link a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.github-link a:hover {
+    text-decoration: underline;
+}

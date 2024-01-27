@@ -33,26 +33,9 @@ document.addEventListener('DOMContentLoaded', async function () {
             document.querySelector('main').appendChild(article);
         });
 
-        // Add event listener for the search bar
-        const searchBar = document.getElementById('search-bar');
-        searchBar.addEventListener('input', function () {
-            const searchTerm = searchBar.value.toLowerCase();
-
-            // Clear existing search results
-            const main = document.querySelector('main');
-            main.innerHTML = '';
-
-            // Filter and display posts that match the search term
-            const matchingPosts = allPosts.filter((post) => post.name.toLowerCase().includes(searchTerm));
-            matchingPosts.forEach((post) => {
-                const article = document.createElement('article');
-                article.innerHTML = `
-                    <h2><a href="${post.html_url}" target="_blank">${post.name}</a></h2>
-                    <div>${post.content}</div>
-                `;
-                main.appendChild(article);
-            });
-        });
+        // Add event listener for the search button
+        const searchButton = document.getElementById('search-button');
+        searchButton.addEventListener('click', performSearch);
     } catch (error) {
         // Handle errors and log them to the console
         console.error('Error fetching and displaying blog posts:', error);
@@ -64,6 +47,27 @@ document.addEventListener('DOMContentLoaded', async function () {
         main.appendChild(errorMessage);
     }
 });
+
+function performSearch() {
+    const searchBar = document.getElementById('search-bar');
+    const searchTerm = searchBar.value.toLowerCase();
+
+    // Clear existing search results
+    const main = document.querySelector('main');
+    main.innerHTML = '';
+
+    // Filter and display posts that match the search term
+    const matchingPosts = allPosts.filter((post) => post.name.toLowerCase().includes(searchTerm));
+    matchingPosts.forEach((post) => {
+        const article = document.createElement('article');
+        article.innerHTML = `
+            <h2><a href="${post.html_url}" target="_blank">${post.name}</a></h2>
+            <div>${post.content}</div>
+        `;
+        main.appendChild(article);
+    });
+}
+
 
 
 

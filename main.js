@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Reverse the posts so that the latest one appears first
                 posts.reverse().forEach(post => {
                     // Extract post content from the GitHub API response
-                    const postContent = decodeURIComponent(escape(atob(post.content)));
+                    const postContent = new TextDecoder().decode(new Uint8Array([...atob(post.content)].map(char => char.charCodeAt(0))));
 
                     // Create a new article element for each post
                     const article = document.createElement('article');
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the function to fetch and display all blog posts
     fetchAndDisplayPosts();
 });
+
 
 
 

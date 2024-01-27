@@ -26,8 +26,16 @@ main {
     padding: 20px;
 }
 
+/* Style each blog post as a card with a border */
 article {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 8px; /* Border radius for rounded corners */
+    padding: 15px;
+    background-color: #fff; /* Background color for each card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the fixed height */
+    max-height: 400px; /* Set a maximum height for the card */
 }
 
 /* Style links */
@@ -40,12 +48,11 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Style header image */
 .centered-image {
     display: block;
     margin: 0 auto;
-}
-
-.smaller-image {
-    width: 50%; /* Adjust the percentage as needed */
+    width: 50%; /* Adjust the width as needed */
     max-width: 200px; /* Set a maximum width if necessary */
 }
+

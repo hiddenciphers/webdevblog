@@ -22,11 +22,9 @@ The structure of the project is as follows:
 
 2. **Blog Posts**: The main section of the blog is styled to have a maximum width of 800px, centered, and with padding. Each blog post appears as a card with a border, providing a neat and organized display. The JavaScript in main.js fetches the content of a specific blog post from the GitHub repository using the GitHub API. It then dynamically creates an article element with the post content and appends it to the main section.
 
-3. **Styles**: The styles.css file provides styling for the entire blog, including header, links, and the centered image. Each blog post is styled as a card for improved readability. It uses a responsive design to ensure a good user experience on various devices.
+3. **Footer**: The footer is styled with the same dark background as the header and includes clickable icons linked to my various social media pages, such as Github, LinkedIn, X and Instagram. Additionally, there is a ProtonMail logo that serves as a mailto link, opening a new email to send directly to me.
 
-## Footer
-
-The footer is styled with the same dark background as the header and includes clickable icons linked to my various social media pages, such as Github, LinkedIn, X and Instagram. Additionally, there is a ProtonMail logo that serves as a mailto link, opening a new email to send directly to me.
+4. **Styles**: The styles.css file provides styling for the entire blog, including header, footer, links, and images. Each blog post is styled as a card for improved readability. It uses a responsive design to ensure a good user experience on various devices.
 
 ## Hosting and Deployment
 

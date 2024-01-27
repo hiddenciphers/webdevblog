@@ -8,17 +8,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
             console.log('Fetched posts:', posts);  // Log the fetched posts to the console
 
-            // Reverse the posts so that the latest one appears first
-            posts.reverse().forEach(async (post) => {
-                // Fetch the raw content of the post
+            // Fetch all posts concurrently
+            const postPromises = posts.map(async (post) => {
                 const postResponse = await fetch(post.download_url);
                 const postContent = await postResponse.text();
 
+                // Return an object with post data
+                return {
+                    name: post.name.replace('.html', ''),
+                    html_url: post.html_url,
+                    content: postContent,
+                };
+            });
+
+            // Wait for all promises to resolve
+            const allPosts = await Promise.all(postPromises);
+
+            // Reverse the posts so that the latest one appears first
+            allPosts.reverse().forEach((post) => {
                 // Create a new article element for each post
                 const article = document.createElement('article');
                 article.innerHTML = `
-                    <h2><a href="${post.html_url}" target="_blank">${post.name.replace('.html', '')}</a></h2>
-                    <div>${postContent}</div>
+                    <h2><a href="${post.html_url}" target="_blank">${post.name}</a></h2>
+                    <div>${post.content}</div>
                 `;
 
                 // Append the article to the main section
@@ -32,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the function to fetch and display all blog posts
     fetchAndDisplayPosts();
 });
+
 
 
 

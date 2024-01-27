@@ -52,8 +52,8 @@ a:hover {
 .centered-image {
     display: block;
     margin: 0 auto;
-    width: 25%; /* Adjust the width as needed */
-    max-width: 100px; /* Set a maximum width if necessary */
+    width: 50%; /* Adjust the width as needed */
+    max-width: 200px; /* Set a maximum width if necessary */
 }
 
 /* Style post image */

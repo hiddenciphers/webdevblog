@@ -53,7 +53,7 @@ a:hover {
     display: block;
     margin: 0 auto;
     width: 25%; /* Adjust the width as needed */
-    max-width: 200px; /* Set a maximum width if necessary */
+    max-width: 100px; /* Set a maximum width if necessary */
 }
 
 /* Style post image */

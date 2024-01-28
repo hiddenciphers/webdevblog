@@ -12,15 +12,19 @@ document.addEventListener('DOMContentLoaded', function () {
             const postPromises = posts.map(async (post) => {
                 const postResponse = await fetch(post.download_url);
                 const postContent = await postResponse.text();
-
+            
+                // Parse the title from the HTML content
+                const titleMatch = postContent.match(/<title>(.*?)<\/title>/);
+                const title = titleMatch ? titleMatch[1] : 'Untitled'; // Default to 'Untitled' if no title found
+            
                 // Return an object with post data
                 return {
-                    name: post.name.replace('.html', ''),
+                    title,
                     html_url: post.html_url,
                     content: postContent,
                 };
             });
-
+            
             // Wait for all promises to resolve
             const allPosts = await Promise.all(postPromises);
 
@@ -29,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Create a new article element for each post
                 const article = document.createElement('article');
                 article.innerHTML = `
-                    <h2><a href="${post.html_url}" target="_blank">${post.name}</a></h2>
+                    <h2><a href="${post.html_url}" target="_blank">${post.title}</a></h2>
                     <div>${post.content}</div>
                 `;
 

@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Declare the header variable by selecting the header element
-    const header = document.querySelector('header');
-
     // Function to fetch and display all blog posts
     async function fetchAndDisplayPosts() {
         try {
-            // Blog posts are stored in a 'posts' directory on GitHub
+            // Assuming your blog posts are stored in a 'posts' directory on GitHub
             const response = await fetch('https://api.github.com/repos/hiddenciphers/webdevblog/contents/posts');
             const posts = await response.json();
 
@@ -43,84 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Append the article to the main section
                 document.querySelector('main').appendChild(article);
             });
-
-            // Populate the table of contents
-            populateTableOfContents(allPosts);
         } catch (error) {
             console.error('Error fetching and displaying blog posts:', error);
         }
     }
 
-    // JavaScript for table of contents toggle
-    const tocToggle = document.getElementById("toc-toggle");
-    const tableOfContents = document.getElementById("table-of-contents");
-
-    tocToggle.addEventListener("click", function (event) {
-        event.stopPropagation(); // Prevent the click event from reaching the document
-
-        // Toggle the width of the table of contents
-        tableOfContents.style.width = tableOfContents.style.width === "0px" ? "200px" : "0px";
-    });
-
-    // Add event listener to hide the table of contents when clicking anywhere else
-    document.addEventListener("click", function (event) {
-        // Check if the clicked element is outside the table of contents and list icon
-        if (!tableOfContents.contains(event.target) && event.target !== tocToggle) {
-            // Hide the table of contents
-            tableOfContents.style.width = "0px";
-        }
-    });
-
-    // Function to populate the table of contents
-    function populateTableOfContents(posts) {
-        const tableOfContents = document.getElementById('table-of-contents');
-
-        posts.forEach((post, index) => {
-            const entry = document.createElement('div');
-            entry.classList.add('table-of-contents-entry');
-            entry.textContent = post.title;
-
-            // Add a click event listener to scroll to the corresponding blog post
-            entry.addEventListener('click', () => {
-                scrollToBlogPost(index);
-            });
-
-            tableOfContents.appendChild(entry);
-        });
-    }
-
     // Call the function to fetch and display all blog posts
     fetchAndDisplayPosts();
-
-    // Scroll to the selected blog post when a table of contents entry is clicked
-    function scrollToBlogPost(index) {
-        const blogPostElements = document.querySelectorAll('main article');
-        const targetBlogPost = blogPostElements[index];
-
-        if (targetBlogPost) {
-            window.scrollTo({
-                top: targetBlogPost.offsetTop,
-                behavior: 'smooth',
-            });
-        }
-    }
-
-    // Add scroll event listener to highlight the active entry in the table of contents
-    window.addEventListener('scroll', function () {
-        const blogPostElements = document.querySelectorAll('main article');
-        const tableOfContentsEntries = document.querySelectorAll('.table-of-contents-entry');
-
-        blogPostElements.forEach((post, index) => {
-            const rect = post.getBoundingClientRect();
-
-            if (rect.top <= 150 && rect.bottom >= 150) {
-                // Highlight the corresponding entry in the table of contents
-                tableOfContentsEntries.forEach((entry, entryIndex) => {
-                    entry.classList.toggle('active', index === entryIndex);
-                });
-            }
-        });
-    });
 
     // Toggle between dark and light modes
     const modeToggle = document.getElementById('mode-toggle');
@@ -137,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.body.classList.remove('fixed-toggle');
         }
     });
-});
+}); 
 
 
 

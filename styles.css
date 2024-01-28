@@ -152,3 +152,27 @@ body.dark-mode {
     transform: translateX(25px); /* Move the slider to the right for dark mode */
 }
 
+/* Style for the table of contents */
+.table-of-contents {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for each table of contents entry */
+.table-of-contents-entry {
+    margin-bottom: 10px;
+}
+
+/* Highlight the selected entry in the table of contents */
+.table-of-contents-entry.active {
+    font-weight: bold;
+}
+
+

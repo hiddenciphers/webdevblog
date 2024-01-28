@@ -84,3 +84,42 @@ footer {
     width: 180px; /* 2 times larger than other social media icons */
 }
 
+/* Style for dark/light mode toggle switch */
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 25px;
+    background-color: #ddd; /* Light background color */
+    border-radius: 12.5px; /* Round corners */
+    cursor: pointer;
+}
+
+/* Style for the slider inside the toggle switch */
+.mode-toggle::before {
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 20px;
+    height: 20px;
+    background-color: #fff; /* Light color for the slider */
+    border-radius: 50%; /* Circle for the slider */
+    transition: transform 0.3s;
+}
+
+/* Style for dark mode */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.mode-toggle.dark-mode {
+    background-color: #555; /* Dark background color for the toggle switch */
+}
+
+.mode-toggle.dark-mode::before {
+    transform: translateX(25px); /* Move the slider to the right for dark mode */
+}
+

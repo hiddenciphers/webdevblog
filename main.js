@@ -47,6 +47,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Call the function to fetch and display all blog posts
     fetchAndDisplayPosts();
+
+    // Toggle between dark and light modes
+    const modeToggle = document.getElementById('mode-toggle');
+    modeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        modeToggle.classList.toggle('dark-mode');
+    });
 });
 
 

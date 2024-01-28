@@ -40,6 +40,18 @@ article {
     max-height: 400px; /* Set a maximum height for the card */
 }
 
+/* Style for dark mode */
+body.dark-mode article {
+    background-color: #333; /* Dark background color for each card */
+    border-color: #555; /* Dark border color */
+    color: #fff; /* Text color in dark mode */
+}
+
+/* Style links inside the article for better visibility in dark mode */
+body.dark-mode article a {
+    color: #6fa3ef; /* Adjust link color for better visibility in dark mode */
+}
+
 /* Style links */
 a {
     color: #3686e8;

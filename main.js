@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to fetch and display all blog posts
     async function fetchAndDisplayPosts() {
         try {
-            // Blog posts are stored in a 'posts' directory on GitHub
+            // Assuming your blog posts are stored in a 'posts' directory on GitHub
             const response = await fetch('https://api.github.com/repos/hiddenciphers/webdevblog/contents/posts');
             const posts = await response.json();
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const allPosts = await Promise.all(postPromises);
 
             // Reverse the posts so that the latest one appears first
-            allPosts.reverse().forEach((post) => {
+            allPosts.reverse().forEach((post, index) => {
                 // Create a new article element for each post
                 const article = document.createElement('article');
                 article.innerHTML = `
@@ -39,6 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Append the article to the main section
                 document.querySelector('main').appendChild(article);
+
+                // Add the corresponding entry to the table of contents
+                const tableOfContents = document.getElementById('table-of-contents');
+                const entry = document.createElement('div');
+                entry.classList.add('table-of-contents-entry');
+                entry.textContent = post.title;
+
+                // Add a click event listener to scroll to the corresponding blog post
+                entry.addEventListener('click', () => {
+                    scrollToBlogPost(index);
+                });
+
+                tableOfContents.appendChild(entry);
             });
 
             // Populate the table of contents
@@ -66,9 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Call the function to fetch and display all blog posts
-    fetchAndDisplayPosts();
-
     // Scroll to the selected blog post when a table of contents entry is clicked
     function scrollToBlogPost(index) {
         const blogPostElements = document.querySelectorAll('main article');
@@ -82,22 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Add scroll event listener to highlight the active entry in the table of contents
-    window.addEventListener('scroll', function () {
-        const blogPostElements = document.querySelectorAll('main article');
-        const tableOfContentsEntries = document.querySelectorAll('.table-of-contents-entry');
-
-        blogPostElements.forEach((post, index) => {
-            const rect = post.getBoundingClientRect();
-
-            if (rect.top <= 150 && rect.bottom >= 150) {
-                // Highlight the corresponding entry in the table of contents
-                tableOfContentsEntries.forEach((entry, entryIndex) => {
-                    entry.classList.toggle('active', index === entryIndex);
-                });
-            }
-        });
-    });
+    // Call the function to fetch and display all blog posts
+    fetchAndDisplayPosts();
 
     // Toggle between dark and light modes
     const modeToggle = document.getElementById('mode-toggle');
@@ -115,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 
 

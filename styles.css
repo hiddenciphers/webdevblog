@@ -165,14 +165,6 @@ body.dark-mode {
     cursor: pointer;
 }
 
-/* Style for the content container with two columns */
-.content-container {
-    display: flex;
-    gap: 20px; /* Adjust the gap between the table of contents and blog post cards */
-    max-width: 1200px; /* Set a maximum width for the container */
-    margin: 0 auto;
-}
-
 /* Style for each table of contents entry */
 .table-of-contents-entry {
     margin-bottom: 10px;

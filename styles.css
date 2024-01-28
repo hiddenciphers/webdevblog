@@ -154,15 +154,20 @@ body.dark-mode {
 
 /* Style for the table of contents */
 .table-of-contents {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 200px;
     height: 100%;
     overflow-y: auto;
     background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the content container with two columns */
+.content-container {
+    display: flex;
+    gap: 20px; /* Adjust the gap between the table of contents and blog post cards */
+    max-width: 1200px; /* Set a maximum width for the container */
+    margin: 0 auto;
 }
 
 /* Style for each table of contents entry */
@@ -174,5 +179,6 @@ body.dark-mode {
 .table-of-contents-entry.active {
     font-weight: bold;
 }
+
 
 

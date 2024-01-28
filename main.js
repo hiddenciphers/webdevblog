@@ -49,9 +49,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // JavaScript for table of contents toggle
-    document.getElementById("toc-toggle").addEventListener("click", function () {
-        var toc = document.getElementById("table-of-contents");
-        toc.style.width = toc.style.width === "0px" ? "200px" : "0px";
+    const tocToggle = document.getElementById("toc-toggle");
+    const tableOfContents = document.getElementById("table-of-contents");
+
+    tocToggle.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevent the click event from reaching the document
+
+        // Toggle the width of the table of contents
+        tableOfContents.style.width = tableOfContents.style.width === "0px" ? "200px" : "0px";
+    });
+
+    // Add event listener to hide the table of contents when clicking anywhere else
+    document.addEventListener("click", function (event) {
+        // Check if the clicked element is outside the table of contents and list icon
+        if (!tableOfContents.contains(event.target) && event.target !== tocToggle) {
+            // Hide the table of contents
+            tableOfContents.style.width = "0px";
+        }
     });
 
     // Function to populate the table of contents
@@ -121,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 
 

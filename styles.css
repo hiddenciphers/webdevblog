@@ -22,18 +22,14 @@ h1 {
     font-size: 2em;
 }
 
-/* Style for the main section containing blog posts */
 main {
-    display: flex;
-    flex-wrap: wrap; /* Ensure responsiveness for smaller screens */
-    gap: 20px; /* Adjust the gap between blog post cards */
-    justify-content: space-between; /* Distribute items evenly in the main section */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Style each blog post as a card with a border */
 article {
-    width: calc(50% - 10px); /* Adjust the width for a two-column layout with gap */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
     margin-bottom: 20px;
     border: 1px solid #ddd; /* Border color */
     border-radius: 8px; /* Border radius for rounded corners */

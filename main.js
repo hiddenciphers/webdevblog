@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Declare the header variable by selecting the header element
+    const header = document.querySelector('header');
+
     // Function to fetch and display all blog posts
     async function fetchAndDisplayPosts() {
         try {
@@ -135,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 
 
 

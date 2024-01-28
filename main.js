@@ -54,6 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.classList.toggle('dark-mode');
         modeToggle.classList.toggle('dark-mode');
     });
+
+    // Add scroll event listener to toggle fixed class
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > header.offsetHeight) {
+            document.body.classList.add('fixed-toggle');
+        } else {
+            document.body.classList.remove('fixed-toggle');
+        }
+    });
 });
 
 

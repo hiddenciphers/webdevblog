@@ -98,7 +98,7 @@ footer {
 
 /* Style for dark/light mode toggle switch */
 .mode-toggle {
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     width: 50px;
@@ -106,6 +106,16 @@ footer {
     background-color: #fff; /* Light background color */
     border-radius: 12.5px; /* Round corners */
     cursor: pointer;
+}
+
+/* Fixed position for the toggle switch inside the header */
+header {
+    position: relative;
+}
+
+/* Fixed position for the toggle switch */
+body.fixed-toggle .mode-toggle {
+    position: fixed;
 }
 
 /* Style for the slider inside the toggle switch */

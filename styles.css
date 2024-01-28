@@ -156,6 +156,7 @@ body.dark-mode {
 .table-of-contents {
     width: 200px;
     height: 100%;
+    border: 1px solid #ddd; /* Border color */
     overflow-y: auto;
     background-color: #f0f0f0;
     padding: 20px;

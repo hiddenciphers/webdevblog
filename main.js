@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Select the header element
+    const header = document.querySelector('header');
+
     // Function to fetch and display all blog posts
     async function fetchAndDisplayPosts() {
         try {
-            // Assuming your blog posts are stored in a 'posts' directory on GitHub
+            // Blog posts are stored in a 'posts' directory on GitHub
             const response = await fetch('https://api.github.com/repos/hiddenciphers/webdevblog/contents/posts');
             const posts = await response.json();
 
@@ -57,13 +60,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add scroll event listener to toggle fixed class
     window.addEventListener('scroll', function () {
+        // Use the defined 'header' variable instead of 'header'
         if (window.scrollY > header.offsetHeight) {
             document.body.classList.add('fixed-toggle');
         } else {
             document.body.classList.remove('fixed-toggle');
         }
     });
-}); 
+});
+ 
 
 
 

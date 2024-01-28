@@ -28,7 +28,7 @@ main {
     padding: 20px;
 }
 
-/* Styles for the blog posts */
+/* Adjust styles for the blog posts */
 #blog-posts {
     flex-grow: 1;
     max-width: 600px; /* Adjust the width as needed */
@@ -159,14 +159,21 @@ body.dark-mode {
     transform: translateX(25px); /* Move the slider to the right for dark mode */
 }
 
-/* Styles for the content container */
+/* Style for the table of contents toggle icon */
+.toc-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Updated styles for the content container */
 .content-container {
     display: flex;
 }
 
 /* Style for the table of contents */
 .table-of-contents {
-    width: 200px;
+    width: 0; /* Start with 0 width */
     height: 100%;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -175,6 +182,7 @@ body.dark-mode {
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition: width 0.3s ease; /* Add a transition for a smoother effect */
 }
 
 /* Style for each table of contents entry */
@@ -186,6 +194,3 @@ body.dark-mode {
 .table-of-contents-entry.active {
     font-weight: bold;
 }
-
-
-

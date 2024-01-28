@@ -48,6 +48,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // JavaScript for table of contents toggle
+    document.getElementById("toc-toggle").addEventListener("click", function () {
+        var toc = document.getElementById("table-of-contents");
+        toc.style.width = toc.style.width === "0px" ? "200px" : "0px";
+    });
+
     // Function to populate the table of contents
     function populateTableOfContents(posts) {
         const tableOfContents = document.getElementById('table-of-contents');

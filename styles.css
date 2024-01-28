@@ -111,7 +111,7 @@ footer {
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .mode-toggle {
-        top: 10px; /* Adjust the top position for better visibility on mobile */
+        top: 5px; /* Adjust the top position for better visibility on mobile */
     }
 }
 

@@ -31,6 +31,7 @@ main {
 /* Adjust styles for the blog posts */
 #blog-posts {
     max-width: 600px; /* Adjust the width as needed */
+    margin-left: 20px; /* Add margin to separate the table of contents and blog posts */
 }
 
 /* Style each blog post as a card with a border */
@@ -160,7 +161,6 @@ body.dark-mode {
 /* Styles for the content container */
 .content-container {
     display: flex;
-    justify-content: space-between;
 }
 
 /* Style for the table of contents */

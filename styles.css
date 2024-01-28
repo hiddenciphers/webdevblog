@@ -108,6 +108,13 @@ footer {
     cursor: pointer;
 }
 
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .mode-toggle {
+        top: 50px; /* Adjust the top position for better visibility on mobile */
+    }
+}
+
 /* Fixed position for the toggle switch inside the header */
 header {
     position: relative;

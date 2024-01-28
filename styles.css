@@ -157,10 +157,12 @@ body.dark-mode {
     width: 200px;
     height: 100%;
     border: 1px solid #ddd; /* Border color */
+    border-radius: 8px; /* Border radius for rounded corners */
     overflow-y: auto;
     background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 /* Style for the content container with two columns */

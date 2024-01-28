@@ -91,7 +91,7 @@ footer {
     right: 20px;
     width: 50px;
     height: 25px;
-    background-color: #ddd; /* Light background color */
+    background-color: #fff; /* Light background color */
     border-radius: 12.5px; /* Round corners */
     cursor: pointer;
 }
@@ -111,12 +111,12 @@ footer {
 
 /* Style for dark mode */
 body.dark-mode {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
 }
 
 .mode-toggle.dark-mode {
-    background-color: #555; /* Dark background color for the toggle switch */
+    background-color: #000000; /* Dark background color for the toggle switch */
 }
 
 .mode-toggle.dark-mode::before {

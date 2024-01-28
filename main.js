@@ -53,24 +53,8 @@ document.addEventListener('DOMContentLoaded', function () {
     modeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         modeToggle.classList.toggle('dark-mode');
-        toggleIcon(); // Call the function to toggle the sun/moon icons
     });
-
-    // Function to toggle between sun and moon icons
-    function toggleIcon() {
-        const sunIcon = document.getElementById('sun');
-        const moonIcon = document.getElementById('moon');
-        const slider = document.querySelector('.slider');
-
-        sunIcon.classList.toggle('hidden');
-        moonIcon.classList.toggle('hidden');
-        slider.classList.toggle('dark-mode-slider');
-    }
-
-    // Call the function to set the initial icon based on the current mode
-    toggleIcon();
 });
-
 
 
 

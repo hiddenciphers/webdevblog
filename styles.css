@@ -106,46 +106,25 @@ footer {
     background-color: #fff; /* Light background color */
     border-radius: 12.5px; /* Round corners */
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    padding: 3px; /* Adjust padding for better visual appearance */
-    position: relative;
-    overflow: hidden;
-}
-
-/* Style for the sun and moon icons */
-.icon {
-    font-size: 18px;
-    line-height: 18px;
-    color: #d7d6d6; /* Light color for the icons */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: opacity 0.3s; /* Add a transition for a smooth effect */
 }
 
 /* Style for the slider inside the toggle switch */
-.slider {
-    width: 50%;
-    height: 100%;
+.mode-toggle::before {
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 20px;
+    height: 20px;
     background-color: #d7d6d6; /* Light color for the slider */
-    border-radius: 12.5px; /* Round corners for the slider */
-    transition: background-color 0.3s; /* Add a transition for a smooth effect */
+    border-radius: 50%; /* Circle for the slider */
+    transition: transform 0.3s;
 }
 
 /* Style for dark mode */
-body.dark-mode .icon {
-    color: #fff; /* Color for the icons in dark mode */
-}
-
-/* Style for hiding inactive icon */
-.icon.hidden {
-    opacity: 0;
-}
-
-/* Style for dark mode slider */
-body.dark-mode .slider {
-    background-color: #333; /* Dark color for the slider in dark mode */
+body.dark-mode {
+    background-color: #000000;
+    color: #fff;
 }
 
 .mode-toggle.dark-mode {

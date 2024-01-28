@@ -28,16 +28,21 @@ main {
     padding: 20px;
 }
 
+/* Adjust styles for the blog posts */
+#blog-posts {
+    max-width: 600px; /* Adjust the width as needed */
+}
+
 /* Style each blog post as a card with a border */
 article {
     margin-bottom: 20px;
-    border: 1px solid #ddd; /* Border color */
-    border-radius: 8px; /* Border radius for rounded corners */
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 15px;
-    background-color: #fff; /* Background color for each card */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
-    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the fixed height */
-    max-height: 400px; /* Set a maximum height for the card */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 /* Style for dark mode */
@@ -152,12 +157,18 @@ body.dark-mode {
     transform: translateX(25px); /* Move the slider to the right for dark mode */
 }
 
+/* Styles for the content container */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Style for the table of contents */
 .table-of-contents {
     width: 200px;
     height: 100%;
-    border: 1px solid #ddd; /* Border color */
-    border-radius: 8px; /* Border radius for rounded corners */
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow-y: auto;
     background-color: #f0f0f0;
     padding: 20px;

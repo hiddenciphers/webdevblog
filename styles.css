@@ -9,9 +9,14 @@ body {
     line-height: 1.6;
 }
 
+/* Set the default dark mode */
+body {
+    background-color: #000000;
+    color: #fff;
+}
+
 header {
-    /* background-color: #333; */
-    background-image: url('img/hiddenciphers.jpeg'); /* Set the path to the image */
+    background-image: url('img/hiddenciphers.jpeg');
     background-size: cover;
     color: #fff;
     text-align: center;
@@ -31,25 +36,25 @@ main {
 /* Style each blog post as a card with a border */
 article {
     margin-bottom: 20px;
-    border: 1px solid #ddd; /* Border color */
-    border-radius: 8px; /* Border radius for rounded corners */
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 15px;
-    background-color: #fff; /* Background color for each card */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
-    overflow-y: auto; /* Enable vertical scrollbar if content exceeds the fixed height */
-    max-height: 400px; /* Set a maximum height for the card */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 /* Style for dark mode */
 body.dark-mode article {
-    background-color: #333; /* Dark background color for each card */
-    border-color: #555; /* Dark border color */
-    color: #fff; /* Text color in dark mode */
+    background-color: #333;
+    border-color: #555;
+    color: #fff;
 }
 
 /* Style links inside the article for better visibility in dark mode */
 body.dark-mode article a {
-    color: #6fa3ef; /* Adjust link color for better visibility in dark mode */
+    color: #6fa3ef;
 }
 
 /* Style links */
@@ -66,16 +71,16 @@ a:hover {
 .centered-image {
     display: block;
     margin: 0 auto;
-    width: 50%; /* Adjust the width as needed */
-    max-width: 200px; /* Set a maximum width if necessary */
+    width: 50%;
+    max-width: 200px;
 }
 
 /* Style post image */
 .post-image {
     display: block;
     margin: 0 auto;
-    max-width: 100%; /* Ensure the image doesn't exceed the container width */
-    border-radius: 8px 8px 8px 8px; /* Rounded corners for the card */
+    max-width: 100%;
+    border-radius: 8px 8px 8px 8px;
 }
 
 /* Style social media icons in the footer */
@@ -87,13 +92,13 @@ footer {
 }
 
 .social-media-icon {
-    width: 90px; /* 3 times their current size */
-    margin: 0 10px; /* Adjust the margin as needed */
+    width: 90px;
+    margin: 0 10px;
 }
 
 /* Style ProtonMail logo separately */
 .protonmail-logo {
-    width: 180px; /* 2 times larger than other social media icons */
+    width: 180px;
 }
 
 /* Style for dark/light mode toggle switch */
@@ -103,15 +108,15 @@ footer {
     right: 20px;
     width: 50px;
     height: 25px;
-    background-color: #fff; /* Light background color */
-    border-radius: 12.5px; /* Round corners */
+    background-color: #fff;
+    border-radius: 12.5px;
     cursor: pointer;
 }
 
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .mode-toggle {
-        top: 5px; /* Adjust the top position for better visibility on mobile */
+        top: 5px;
     }
 }
 
@@ -133,21 +138,21 @@ body.fixed-toggle .mode-toggle {
     left: 2.5px;
     width: 20px;
     height: 20px;
-    background-color: #d7d6d6; /* Light color for the slider */
-    border-radius: 50%; /* Circle for the slider */
+    background-color: #d7d6d6;
+    border-radius: 50%;
     transition: transform 0.3s;
 }
 
 /* Style for dark mode */
-body.dark-mode {
+body.dark-mode .mode-toggle {
     background-color: #000000;
-    color: #fff;
 }
 
 .mode-toggle.dark-mode {
-    background-color: #000000; /* Dark background color for the toggle switch */
+    background-color: #000000;
 }
 
 .mode-toggle.dark-mode::before {
-    transform: translateX(25px); /* Move the slider to the right for dark mode */
+    transform: translateX(25px);
 }
+

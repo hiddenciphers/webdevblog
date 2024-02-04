@@ -160,7 +160,7 @@ body.dark-mode {
 }
 
 .post3-image-div {
-    display: block; /* Flex container */
+    display: flex; /* Flex container */
     height: 200px;
 }
 

@@ -171,13 +171,7 @@ body.dark-mode {
 
 @media only screen and (max-width: 375px) {
     .post3-image-div {
-        flex-direction: row; /* Stack images horizontally on smaller screens */ 
-    }
-}
-
-@media only screen and (max-width: 375px) {
-    .post3-image {
-        height: 10px;
-        width: 20px; 
+        flex-direction: row; /* Stack images horizontally on smaller screens */
+        height: fit-content; 
     }
 }

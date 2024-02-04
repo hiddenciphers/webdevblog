@@ -165,15 +165,8 @@ body.dark-mode {
 }
 
 .post3-image-div img {
-    margin-right: 10px !important; /* Spacing between images */
-    border-radius: 8px !important;
-    max-width: 100% !important; /* Set max-width to ensure responsiveness */
-}
-
-@media only screen and (max-width: 375px) {
-    .post3-image-div img {
-        margin-right: 0 !important; /* Remove margin on smaller screens */
-    }
+    margin-right: 10px; /* Spacing between images */
+    border-radius: 8px;
 }
 
 

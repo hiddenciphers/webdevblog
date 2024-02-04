@@ -171,8 +171,12 @@ body.dark-mode {
 
 @media only screen and (max-width: 375px) {
     .post3-image-div {
-        flex-direction: row; /* Stack images horizontally on smaller screens */
-        height: 50%; 
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        height: auto; /* Adjust height based on content */
+    }
+
+    .post3-image-div img {
+        margin-right: 0; /* Remove margin on smaller screens */
     }
 }
 

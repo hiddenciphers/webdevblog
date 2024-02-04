@@ -156,14 +156,14 @@ body.dark-mode {
 .post3-image {
     height: 200px;
     width: 380px;
-    border-radius: 8px 8px 8px 8px; /* Rounded Corners */
+    border-radius: 8px 8px 8px 8px; /* Rounded corners */
 }
 
 .post3-image-div {
-    display: flex;
+    display: flex; /* Flex container */
     height: 200px;
 }
 
 .post3-image-div img {
-    margin-right: 10px;
+    margin-right: 10px; /* Spacing between images */
 }

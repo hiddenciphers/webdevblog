@@ -177,7 +177,7 @@ body.dark-mode {
 
 @media only screen and (max-width: 375px) {
     .post3-image {
-        height: auto;
-        width: auto; 
+        height: 10rem;
+        width: 20rem; 
     }
 }

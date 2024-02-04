@@ -156,6 +156,7 @@ body.dark-mode {
 .post3-image {
     height: 200px;
     width: 380px;
+    border-radius: 8px 8px 8px 8px; /* Rounded Corners */
 }
 
 .post3-image-div {

@@ -169,4 +169,13 @@ body.dark-mode {
     border-radius: 8px;
 }
 
+@media only screen and (max-width: 768px) {
+    .post3-image-div {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        height: auto; /* Adjust height based on content */
+    }
 
+    .post3-image-div img {
+        margin-right: 0; /* Remove margin on smaller screens */
+    }
+}

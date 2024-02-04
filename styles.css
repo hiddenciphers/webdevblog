@@ -151,3 +151,18 @@ body.dark-mode {
 .mode-toggle.dark-mode::before {
     transform: translateX(25px); /* Move the slider to the right for dark mode */
 }
+
+/* Post 3 Styles */
+.post3-image {
+    height: 200px;
+    width: 380px;
+}
+
+.post3-image-div {
+    display: flex;
+    height: 200px;
+}
+
+.post3-image-div img {
+    margin-right: 10px;
+}

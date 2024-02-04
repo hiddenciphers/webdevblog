@@ -176,6 +176,6 @@ body.dark-mode {
     }
 
     .post3-image-div img {
-        height: 50%;
+        height: auto;
     }
 }

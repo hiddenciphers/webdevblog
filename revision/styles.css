@@ -28,8 +28,8 @@ h2 {
     padding-right: 5rem;
 }
 
-@media (max-height: 900px) {
+@media (max-height: 1200px) {
     .back-to-blog {
-        bottom: 5px; /* Adjust the top position for better visibility on mobile */
+        bottom: 5px;
     }
 }

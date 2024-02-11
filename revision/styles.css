@@ -27,8 +27,8 @@ h2 {
     padding-bottom: 5rem;
 }
 
-.back-to-blog {
+footer .back-to-blog {
     font-family: 'saxMono', sans-serif;
     text-align: right;
-    padding-right: 5rem;
+    padding-right: 30px;
 }

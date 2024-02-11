@@ -19,8 +19,13 @@ header {
 }
 
 h1 {
+    font-family: 'saxMono', sans-serif;
     font-size: 2em;
     
+}
+
+title, h2 {
+    font-family: 'saxMono', sans-serif;
 }
 
 main {

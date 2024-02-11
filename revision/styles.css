@@ -12,8 +12,8 @@ h2 {
 }
 
 .revision-image img {
-    padding-left: 23rem;
     height: 400px;
+    padding-left: 25%;
 }
 
 .revision-links {

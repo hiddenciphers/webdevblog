@@ -6,7 +6,7 @@ h1 {
     color: black;                                                
 }
 
-h2 {
+h2, .github-link {
     font-family: 'saxMono', sans-serif;
                                                     
 }

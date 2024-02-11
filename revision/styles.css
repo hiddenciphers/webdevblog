@@ -8,10 +8,14 @@ h1 {
 
 h2 {
     font-family: 'saxMono', sans-serif;
-    text-align: center;                                                
+                                                    
 }
 
-.revision-image img {
+.revision-links {
+    text-align: center;
+}
+
+.revision-header-image img {
     display: block;
     margin: 0 auto;
     max-height: 400px;
@@ -27,4 +31,23 @@ h2 {
     font-family: 'saxMono', sans-serif;
     text-align: right;
     padding-right: 30px;
+}
+
+p, ul {
+    font-family: 'Arial', sans-serif;
+}
+
+.performance-testing {
+    background-color: aliceblue;
+}
+
+.unit-testing {
+    background-color:beige
+}
+.acceptance-testing {
+    background-color: lightgrey;
+}
+
+.end-to-end-testing {
+    background-color: thistle;
 }

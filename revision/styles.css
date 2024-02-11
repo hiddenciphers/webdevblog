@@ -15,6 +15,7 @@ h2 {
     height: 400px;
     display: block;
     margin: 0 auto;
+    border-radius: 8px;
 }
 
 .revision-links {
@@ -25,4 +26,10 @@ h2 {
     font-family: 'saxMono', sans-serif;
     text-align: right;
     padding-right: 5rem;
+}
+
+@media (max-height: 900px) {
+    .back-to-blog {
+        bottom: 5px; /* Adjust the top position for better visibility on mobile */
+    }
 }

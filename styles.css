@@ -69,11 +69,11 @@ a:hover {
 }
 
 /* Style header image */
-.centered-image {
+.header-image {
     display: block;
-    margin: 0 auto;
-    width: 50%; /* Adjust the width as needed */
-    max-width: 200px; /* Set a maximum width if necessary */
+    margin-left: 1%;
+    max-width: 3rem; /* Set a maximum width if necessary */
+    position: absolute;
 }
 
 /* Style post image */

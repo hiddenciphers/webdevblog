@@ -11,6 +11,7 @@ body {
 
 header {
     /* background-color: #333; */
+    position: relative;
     background-image: url('img/hiddenciphers.jpeg'); /* Set the path to the image */
     background-size: cover;
     color: #fff;
@@ -73,7 +74,7 @@ a:hover {
 /* Style header image */
 .header-image {
     display: block;
-    margin-left: 1%;
+    margin-left: 5px;
     max-width: 3rem; /* Set a maximum width if necessary */
     position: absolute;
 }
@@ -108,8 +109,8 @@ footer {
 /* Style for dark/light mode toggle switch */
 .mode-toggle {
     position: absolute;
-    top: 0.3rem;
-    right: 1rem;
+    top: 5px;
+    right: 10px;
     width: 50px;
     height: 25px;
     background-color: #fff; /* Light background color */
@@ -121,18 +122,9 @@ footer {
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
     .mode-toggle {
-        top: 5px; /* Adjust the top position for better visibility on mobile */
+        top: 3px; /* Adjust the top position for better visibility on mobile */
+        right: 3px;
     }
-}
-
-/* Fixed position for the toggle switch inside the header */
-header {
-    position: relative;
-}
-
-/* Fixed position for the toggle switch */
-body.fixed-toggle .mode-toggle {
-    position: fixed;
 }
 
 /* Style for the slider inside the toggle switch */

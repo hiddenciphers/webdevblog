@@ -37,14 +37,15 @@ main {
 
 /* Style each blog post as a card with a border */
 article {
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     border: 1px solid #ddd; /* Border color */
     border-radius: 8px; /* Border radius for rounded corners */
-    padding: 15px;
+    padding: 25px;
     background-color: #fff; /* Background color for each card */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
     overflow-y: auto; /* Enable vertical scrollbar if content exceeds the fixed height */
-    max-height: 32rem; /* Set a maximum height for the card */
+    max-height: 33rem; /* Set a maximum height for the card */
 }
 
 /* Style for dark mode */
@@ -107,7 +108,7 @@ footer {
 /* Style for dark/light mode toggle switch */
 .mode-toggle {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 20px;
     width: 50px;
     height: 25px;

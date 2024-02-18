@@ -184,6 +184,10 @@ body.dark-mode {
     .post3-image-div img {
         height: auto;
     }
+
+    .flex-container {
+        gap: 2rem;
+    }
 }
 
 
@@ -196,23 +200,28 @@ body.dark-mode {
     display: flex;
     flex-wrap: wrap;
     /*border: 1px solid black;*/
-    gap: 1rem;
+    gap: 5rem;
     justify-content: center;
-    margin-top: 3rem;
-    
+    margin-top: 1rem;
 }
 
 .flex-item {
-    flex-basis: 150px;
+    flex-basis: 100px;
     background-color: lightgrey;
-    max-height: 200px;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 5px;
     text-align: center;
     flex-grow: 1;
     border: 1px solid black;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
 }
 
 h2, .flexbox {
     margin-top: 1.5rem;
+}
+
+.dark-mode .flex-item {
+    border: 1px solid white;
+    box-shadow: 2px 4px 6px white;
+    color: #000000;
 }

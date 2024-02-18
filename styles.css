@@ -198,12 +198,12 @@ body.dark-mode {
     /*border: 1px solid black;*/
     gap: 1rem;
     justify-content: center;
-    margin-top: 5rem;
-    margin-bottom: 9.8rem;
+    margin-top: 3rem;
+    
 }
 
 .flex-item {
-    flex-basis: 200px;
+    flex-basis: 150px;
     background-color: lightgrey;
     max-height: 200px;
     padding: 1rem;
@@ -211,4 +211,8 @@ body.dark-mode {
     text-align: center;
     flex-grow: 1;
     border: 1px solid black;
+}
+
+h2, .flexbox {
+    margin-top: 1.5rem;
 }

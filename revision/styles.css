@@ -1,44 +1,146 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* background-color: #333; */
+    position: relative;
+    background-image: url('../img/hiddenciphers.jpeg'); /* Set the path to the image */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    text-shadow: rgb(239, 247, 240) 1px 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 h1 {
     font-family: 'saxMono', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    background-color: bisque;
-    color: black;
-    padding: 10px;                                                
+    font-size: 2em;    
 }
 
-h3 {
-    font-size: 1.5rem;
+/* Style header image */
+.header-image {
+    display: block;
+    margin-left: 5px;
+    max-width: 3rem; /* Set a maximum width if necessary */
+    position: absolute;
+    border-radius: 3rem;
+    border: 1px solid #555;
+    box-shadow: 3px 3px 2px 1px rgba(54, 54, 60, 0.2);
+    
 }
 
-h2, .github-link , h3{
+h2 {
     font-family: 'saxMono', sans-serif;
+    text-align: center;
+    font-size: 2rem;
                                                     
 }
 
-.revision-links {
-    text-align: center;
+.revision-header {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .revision-header-image img {
     display: block;
     margin: 0 auto;
-    max-height: 400px;
+    max-height: 300px;
     max-width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.back-to-blog {
+/* CSS Flexbox */
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.flex-item {
+    flex-basis: 100px;
+    background-color: lightgrey;
+    padding: 2rem;
+    max-width: 6rem;
+    border-radius: 5px;
     font-family: 'saxMono', sans-serif;
-    text-align: right;
-    padding-right: 30px;
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid black;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
+}
+
+.dark-mode .flex-item {
+    border: 1px solid white;
+    box-shadow: 2px 4px 6px white;
+    color: #000000;
+}
+
+/* Style social media icons in the footer */
+footer {
+    background-image: url('../img/hiddenciphers.jpeg');
+    text-align: center;
+    padding: 1em;
+}
+
+.social-media-icon {
+    width: 3em; /* 3 times their current size */      
 }
 
 p, ul {
     font-family: 'Arial', sans-serif;
 }
 
+/* Style for dark/light mode toggle switch */
+.mode-toggle {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 50px;
+    height: 25px;
+    background-color: #fff; /* Light background color */
+    border-radius: 12.5px; /* Round corners */
+    cursor: pointer;
+    border: 1px solid #555; /* Dark border color */
+}
+
+/* Style for the slider inside the toggle switch */
+.mode-toggle::before {
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/hiddenciphers.jpeg');
+    border-radius: 50%; /* Circle for the slider */
+    transition: transform 0.3s;
+}
+
+/* Styles for dark mode */
+body.dark-mode {
+    background-color: #000000;
+    color: #fff;
+}
+
+.mode-toggle.dark-mode {
+    background-color: #000000; /* Dark background color for the toggle switch */
+}
+
+.mode-toggle.dark-mode::before {
+    transform: translateX(25px); /* Move the slider to the right for dark mode */
+}
+
+
+/* Testing & Data Structures */
 .performance-testing {
     background-color: aliceblue;
     border-radius: 8px;
@@ -71,11 +173,6 @@ p, ul {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.github-link {
-    background-color: lightblue;
-    border-radius: 6px;
-}
-
 .data-structures {
     text-align: center;
     font-weight: bold;
@@ -97,11 +194,6 @@ p, ul {
     margin-right: 25%;
     border: 2px solid black;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 2rem;
-    text-align: center;
 }
 
 .user-defined-data-structures {

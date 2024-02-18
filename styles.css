@@ -116,14 +116,6 @@ footer {
     border: 1px solid #555; /* Dark border color */
 }
 
-/* Media query for mobile responsiveness */
-@media (max-width: 768px) {
-    .mode-toggle {
-        top: 3px; /* Adjust the top position for better visibility on mobile */
-        right: 5px;
-    }
-}
-
 /* Style for the slider inside the toggle switch */
 .mode-toggle::before {
     content: "";
@@ -137,7 +129,7 @@ footer {
     transition: transform 0.3s;
 }
 
-/* Style for dark mode */
+/* Styles for dark mode */
 body.dark-mode {
     background-color: #000000;
     color: #fff;
@@ -168,6 +160,7 @@ body.dark-mode {
     border-radius: 8px;
 }
 
+/* Post 5 Styles */
 .post5-list-items li {
     font-size: 1.5rem;
     font-weight: bolder;
@@ -178,15 +171,15 @@ body.dark-mode {
 /* CSS Flexbox */
 .flexbox {
     text-align: center;
+    margin-top: 1.5rem;
 }
 
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    /*border: 1px solid black;*/
     gap: 5rem;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .flex-item {
@@ -200,10 +193,6 @@ body.dark-mode {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
 }
 
-.flexbox {
-    margin-top: 1.5rem;
-}
-
 .dark-mode .flex-item {
     border: 1px solid white;
     box-shadow: 2px 4px 6px white;
@@ -211,10 +200,17 @@ body.dark-mode {
 }
 
 .flexbox-body {
-    max-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 768px) {
+    .mode-toggle {
+        top: 3px; /* Adjust the top position for better visibility on mobile */
+        right: 5px;
+    }
     .post3-image-div {
         flex-direction: row; /* Stack images horizontally on smaller screens */
         height: auto; /* Adjust height based on content */

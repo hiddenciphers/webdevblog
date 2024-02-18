@@ -98,13 +98,10 @@ footer {
     background-size: cover;
     text-align: center;
     padding: 1em;
-
 }
 
 .social-media-icon {
-    width: 3em; /* 3 times their current size */
-    
-       
+    width: 3em; /* 3 times their current size */      
 }
 
 /* Style for dark/light mode toggle switch */
@@ -172,6 +169,11 @@ body.dark-mode {
     border-radius: 8px;
 }
 
+.post5-list-items li {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 768px) {
     .post3-image-div {
         flex-direction: row; /* Stack images horizontally on smaller screens */
@@ -182,3 +184,4 @@ body.dark-mode {
         height: auto;
     }
 }
+

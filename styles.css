@@ -180,6 +180,7 @@ body.dark-mode {
     gap: 5rem;
     justify-content: center;
     margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 .flex-item {
@@ -199,10 +200,8 @@ body.dark-mode {
     color: #000000;
 }
 
-.flexbox-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.flexbox-footer {
+    margin-top: 3rem;
 }
 
 /* Media Queries */

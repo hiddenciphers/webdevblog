@@ -174,18 +174,6 @@ body.dark-mode {
     font-family: 'saxMono', sans-serif;
 }
 
-@media only screen and (max-width: 768px) {
-    .post3-image-div {
-        flex-direction: row; /* Stack images horizontally on smaller screens */
-        height: auto; /* Adjust height based on content */
-    }
-
-    .post3-image-div img {
-        height: auto;
-    }
-
-}
-
 
 /* CSS Flexbox */
 .flexbox {
@@ -223,5 +211,23 @@ body.dark-mode {
 }
 
 .flexbox-body {
-    height: 100vh;
+    max-height: 100vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .post3-image-div {
+        flex-direction: row; /* Stack images horizontally on smaller screens */
+        height: auto; /* Adjust height based on content */
+    }
+
+    .post3-image-div img {
+        height: auto;
+    }
+
+    .flex-container {
+        display: inline-flex;
+        gap: 1em;
+        flex-direction: row;
+    }
+
 }

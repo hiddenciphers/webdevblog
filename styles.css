@@ -27,7 +27,7 @@ h1 {
     
 }
 
-title, h2 {
+h2 , .flexbox {
     font-family: 'saxMono', sans-serif;
 }
 
@@ -186,3 +186,29 @@ body.dark-mode {
     }
 }
 
+
+/* CSS Flexbox */
+.flexbox {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*border: 1px solid black;*/
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 9.8rem;
+}
+
+.flex-item {
+    flex-basis: 200px;
+    background-color: lightgrey;
+    max-height: 200px;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid black;
+}

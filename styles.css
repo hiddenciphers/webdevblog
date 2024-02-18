@@ -23,8 +23,7 @@ header {
 
 h1 {
     font-family: 'saxMono', sans-serif;
-    font-size: 2em;
-    
+    font-size: 2em;    
 }
 
 h2 , .flexbox {
@@ -213,7 +212,7 @@ body.dark-mode {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
 }
 
-h2, .flexbox {
+.flexbox {
     margin-top: 1.5rem;
 }
 
@@ -221,4 +220,8 @@ h2, .flexbox {
     border: 1px solid white;
     box-shadow: 2px 4px 6px white;
     color: #000000;
+}
+
+.flexbox-body {
+    height: 100%;
 }

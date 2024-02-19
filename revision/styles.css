@@ -83,6 +83,12 @@ a {
     text-decoration: none;
 }
 
+.dark-mode .revision-header-image img {
+    border: 1px solid white;
+    box-shadow: 2px 4px 6px white;
+
+}
+
 /* Style social media icons in the footer */
 footer {
     background-image: url('../img/hiddenciphers.jpeg');

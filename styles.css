@@ -25,7 +25,7 @@ h1 {
     font-size: 2em;    
 }
 
-h2 , .flexbox {
+h2 {
     font-family: 'saxMono', sans-serif;
 }
 
@@ -167,43 +167,6 @@ body.dark-mode {
     list-style: none;
 }
 
-
-/* CSS Flexbox */
-.flexbox {
-    text-align: center;
-    margin-top: 1.5rem;
-}
-
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-}
-
-.flex-item {
-    flex-basis: 100px;
-    background-color: lightgrey;
-    padding: 2rem;
-    border-radius: 5px;
-    text-align: center;
-    flex-grow: 1;
-    border: 1px solid black;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
-}
-
-.dark-mode .flex-item {
-    border: 1px solid white;
-    box-shadow: 2px 4px 6px white;
-    color: #000000;
-}
-
-.flexbox-footer {
-    margin-top: 2rem;
-}
-
 .mono {
     font-family: 'saxMono', sans-serif;
 }
@@ -223,10 +186,5 @@ body.dark-mode {
         height: auto;
     }
 
-    .flex-container {
-        display: inline-flex;
-        gap: 1em;
-        flex-direction: row;
-    }
 
 }

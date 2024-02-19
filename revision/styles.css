@@ -179,10 +179,6 @@ body.dark-mode {
     color: #000000;
 }
 
-.flexbox-footer {
-    margin-top: 2rem;
-}
-
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     .mode-toggle {

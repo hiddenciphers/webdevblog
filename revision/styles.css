@@ -190,6 +190,7 @@ body.dark-mode {
     .mode-toggle {
         top: 2px; /* Adjust the top position for better visibility on mobile */
         right: 3px;
+        margin: 2px;
     }
 
     .flex-container {

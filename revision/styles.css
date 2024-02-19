@@ -188,9 +188,8 @@ body.dark-mode {
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     .mode-toggle {
-        top: 2px; /* Adjust the top position for better visibility on mobile */
-        right: 3px;
-        margin: 2px;
+        top: 1px; /* Adjust the top position for better visibility on mobile */
+        right: 2px;
     }
 
     .flex-container {

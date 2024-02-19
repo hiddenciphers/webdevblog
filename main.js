@@ -51,36 +51,29 @@ document.addEventListener('DOMContentLoaded', function () {
     // Call the function to fetch and display all blog posts
     fetchAndDisplayPosts();
 
-    /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-
     // Toggle between dark and light modes
     const modeToggle = document.getElementById('mode-toggle');
     modeToggle.addEventListener('click', () => {
+        // Toggle dark mode class
         document.body.classList.toggle('dark-mode');
         modeToggle.classList.toggle('dark-mode');
+
+        // Save the current mode to local storage
+        if(document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+        }
     });
+
+    // Check local storage for dark mode preference on page load
+    if(localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        modeToggle.classList.add('dark-mode');
+    }
 
     // Add scroll event listener to toggle fixed class
     window.addEventListener('scroll', function () {
-        // Use the defined 'header' variable instead of 'header'
         if (window.scrollY > header.offsetHeight) {
             document.body.classList.add('fixed-toggle');
         } else {
@@ -89,7 +82,6 @@ function myFunction() {
     });
 });
  
-
 
 
 

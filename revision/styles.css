@@ -4,6 +4,10 @@ body, h1, h2, h3, p {
     padding: 0;
 }
 
+main {
+    min-height: 100vh;
+}
+
 header {
     /* background-color: #333; */
     position: relative;
@@ -18,6 +22,16 @@ header {
 h1 {
     font-family: 'saxMono', sans-serif;
     font-size: 2em;    
+}
+
+h2 , .flexbox {
+    font-family: 'saxMono', sans-serif;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Style header image */
@@ -53,35 +67,20 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* CSS Flexbox */
-.flex-container {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
-.flex-item {
-    flex-basis: 100px;
-    background-color: lightgrey;
-    padding: 2rem;
-    max-width: 5rem;
-    border-radius: 5px;
+.back-to-blog {
     font-family: 'saxMono', sans-serif;
     text-align: center;
-    flex-grow: 1;
-    border: 1px solid black;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
+    margin-bottom: 1rem;
 }
 
-.dark-mode .flex-item {
-    border: 1px solid white;
-    box-shadow: 2px 4px 6px white;
-    color: #000000;
+.dark-mode a {
+    color: #0563f1;
+    text-decoration: none;
+}
+
+a {
+    color: #0563f1;
+    text-decoration: none;
 }
 
 /* Style social media icons in the footer */
@@ -139,6 +138,65 @@ body.dark-mode {
     transform: translateX(25px); /* Move the slider to the right for dark mode */
 }
 
+/* CSS Flexbox */
+.flexbox {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.revision-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.flex-item {
+    flex-basis: 100px;
+    background-color: lightgrey;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    flex-grow: 1;
+    border: 1px solid black;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
+}
+
+.dark-mode .flex-item {
+    border: 1px solid white;
+    box-shadow: 2px 4px 6px white;
+    color: #000000;
+}
+
+.flexbox-footer {
+    margin-top: 2rem;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .mode-toggle {
+        top: 3px; /* Adjust the top position for better visibility on mobile */
+        right: 5px;
+    }
+
+    .flex-container {
+        display: inline-flex;
+        gap: 1em;
+        flex-direction: row;
+    }
+
+}
 
 /* Testing & Data Structures */
 .performance-testing {

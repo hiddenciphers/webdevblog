@@ -33,6 +33,7 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    min-height: 100vh;
 }
 
 /* Style each blog post as a card with a border */
@@ -163,6 +164,7 @@ body.dark-mode {
     font-size: 1.5rem;
     font-weight: bolder;
     font-family: 'saxMono', sans-serif;
+    list-style: none;
 }
 
 
@@ -200,6 +202,10 @@ body.dark-mode {
 
 .flexbox-footer {
     margin-top: 2rem;
+}
+
+.mono {
+    font-family: 'saxMono', sans-serif;
 }
 
 /* Media Queries */

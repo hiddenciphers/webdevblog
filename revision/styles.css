@@ -178,8 +178,12 @@ body.dark-mode {
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.431);
 }
 
-.two, .four, .six, .eight, .ten, .fourteen, .sixteen {
+.two, .six, .ten, .fourteen, .sixteen {
     min-width: 200px;
+}
+
+.four, .eight {
+    max-width: 50px;
 }
 
 .seven, .twelve {
@@ -209,7 +213,6 @@ body.dark-mode {
         gap: 1em;
         flex-direction: row;
     }
-
 }
 
 /* Testing & Data Structures */
